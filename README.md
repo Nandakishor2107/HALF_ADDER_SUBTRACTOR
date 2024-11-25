@@ -60,10 +60,62 @@ Figure -02 HALF Subtractor
 Developed by: NANDA KISHOR S P
 RegisterNumber: 24011485
 
+
+//HALF ADDER
+
+module ha_dataflow(a, b, s, ca);
+ input a;
+ input b;
+ output s;
+ output ca;
+assign#2 s=a^b;
+assign#2 ca=a&b;
+endmodule
+
+![ha-code](https://github.com/user-attachments/assets/2c24d424-febc-48a1-aaed-9b6153e4e066)
+
+
+//HALF SUBRACTOR
+
+module hs_dataflow(a, b, dif, bor);
+ input a;
+ input b;
+ output dif;
+ output bor;
+wire abar;
+assign#3 abar=~a;
+assign#3 dif=a^b;
+assign#3 bor=b&abar;
+endmodule
+
+![hs-code](https://github.com/user-attachments/assets/12ce4412-bcd3-48a9-ae0c-b424318cbaa7)
+
+
+
 */
 
 **RTL Schematic**
 
+//HALF ADDER
+
+![ha-lg](https://github.com/user-attachments/assets/22ac2d17-d27a-4c9c-9332-6b8e77abb420)
+
+//HALF SUBRACTOR
+
+![hs-lg](https://github.com/user-attachments/assets/4a995539-581d-4562-8226-23221a493098)
+
+
+
 **Output/TIMING Waveform**
+
+//HALF ADDER
+
+![ha-wf](https://github.com/user-attachments/assets/fec8325e-e03a-4fe8-8e2b-db66f2a01753)
+
+//HALF SUBRACTOR
+
+![hs-wf](https://github.com/user-attachments/assets/ab002d4f-4a74-4b9e-af22-0c198c9cd048)
+
+
 
 **Result:**
